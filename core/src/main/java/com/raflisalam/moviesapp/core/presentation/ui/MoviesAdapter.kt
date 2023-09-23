@@ -20,7 +20,6 @@ class MoviesAdapter(
         if (newListData == null) return
         listMovies.clear()
         listMovies.addAll(newListData)
-        notifyDataSetChanged()
     }
 
     inner class ViewHolder(private val binding: ItemMoviesPopularBinding): RecyclerView.ViewHolder(binding.root) {

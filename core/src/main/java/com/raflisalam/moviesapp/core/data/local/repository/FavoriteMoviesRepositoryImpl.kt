@@ -2,7 +2,6 @@ package com.raflisalam.moviesapp.core.data.local.repository
 
 import com.raflisalam.moviesapp.core.common.utils.mapEntitiesToDomain
 import com.raflisalam.moviesapp.core.common.utils.mapFavoriteDomainToEntity
-import com.raflisalam.moviesapp.core.data.local.entity.MoviesEntity
 import com.raflisalam.moviesapp.core.data.local.room.MoviesDao
 import com.raflisalam.moviesapp.core.domain.model.FavoriteMovies
 import com.raflisalam.moviesapp.core.domain.repository.FavoriteMoviesRepository

@@ -2,7 +2,6 @@ package com.raflisalam.moviesapp.favorite.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.raflisalam.moviesapp.core.data.local.entity.MoviesEntity
 import com.raflisalam.moviesapp.core.domain.model.FavoriteMovies
 import com.raflisalam.moviesapp.core.domain.usecase.favorite.FavoriteMoviesUseCase
 import kotlinx.coroutines.flow.Flow

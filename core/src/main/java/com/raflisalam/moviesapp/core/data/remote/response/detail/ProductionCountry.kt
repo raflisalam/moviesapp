@@ -1,4 +1,4 @@
-package com.raflisalam.fakeneflix.data.remote.model.movies
+package com.raflisalam.moviesapp.core.data.remote.response.detail
 
 data class ProductionCountry(
     val iso_3166_1: String,

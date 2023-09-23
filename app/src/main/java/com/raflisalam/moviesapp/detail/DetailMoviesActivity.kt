@@ -11,16 +11,17 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.chip.Chip
 import com.raflisalam.moviesapp.core.R
+import com.raflisalam.moviesapp.core.common.constant.Constants
+import com.raflisalam.moviesapp.core.common.helper.Convert
 import com.raflisalam.moviesapp.core.common.utils.TimeUtils
-import com.raflisalam.moviesapp.core.data.local.entity.MoviesEntity
 import com.raflisalam.moviesapp.core.data.remote.Resource
 import com.raflisalam.moviesapp.core.domain.model.FavoriteMovies
 import com.raflisalam.moviesapp.core.domain.model.MovieDetails
-import com.raflisalam.moviesapp.databinding.ActivityDetailMoviesBinding
 import com.raflisalam.moviesapp.core.presentation.ui.MoviesCastAdapter
 import com.raflisalam.moviesapp.core.presentation.ui.MoviesRecommendationsAdapter
 import com.raflisalam.moviesapp.core.presentation.viewmodel.FavoriteMoviesViewModel
 import com.raflisalam.moviesapp.core.presentation.viewmodel.MoviesViewModel
+import com.raflisalam.moviesapp.databinding.ActivityDetailMoviesBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
@@ -64,7 +65,8 @@ class DetailMoviesActivity : AppCompatActivity() {
                         iconRating.visibility = View.VISIBLE
                         iconTime.visibility = View.VISIBLE
                         rvActor.visibility = View.VISIBLE
-                        rvRecommendations.visibility = View.VISIBLE
+                        textHeadActors.visibility = View.VISIBLE
+                        recyclerView2.visibility = View.VISIBLE
                         layoutAboutFilm.visibility = View.VISIBLE
                         btnWatchlist.visibility = View.VISIBLE
                     }
@@ -87,11 +89,11 @@ class DetailMoviesActivity : AppCompatActivity() {
         if (data != null) {
             binding.apply {
                 Glide.with(this@DetailMoviesActivity)
-                    .load("${com.raflisalam.moviesapp.core.common.constant.Constants.path_image_base_url}${data.backdrop_poster}")
+                    .load("${Constants.path_image_base_url}${data.backdrop_poster}")
                     .apply(RequestOptions())
                     .into(imagePoster)
                 titleMovies.text = data.title
-                ratingMovies.text = "${com.raflisalam.moviesapp.core.common.helper.Convert.roundDouble(data.rating)} |"
+                ratingMovies.text = "${Convert.roundDouble(data.rating)} |"
                 ratingVotes.text = data.rating_vote.toString()
                 timeMovies.text = TimeUtils.formatRuntimeToHoursMinutes(data.runtime)
                 overviewMovies.text = data.synopsis
@@ -166,8 +168,8 @@ class DetailMoviesActivity : AppCompatActivity() {
 
     private fun initRecyclerViewRecommendations() {
         binding.apply {
-            rvRecommendations.layoutManager = LinearLayoutManager(this@DetailMoviesActivity, LinearLayoutManager.HORIZONTAL, false)
-            rvRecommendations.adapter = recommendationsAdapter
+            recyclerView2.layoutManager = LinearLayoutManager(this@DetailMoviesActivity, LinearLayoutManager.HORIZONTAL, false)
+            recyclerView2.adapter = recommendationsAdapter
         }
     }
 

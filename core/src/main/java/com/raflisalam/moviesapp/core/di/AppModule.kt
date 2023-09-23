@@ -1,6 +1,5 @@
 package com.raflisalam.moviesapp.core.di
 
-import com.raflisalam.moviesapp.core.domain.repository.FavoriteMoviesRepository
 import com.raflisalam.moviesapp.core.domain.usecase.favorite.FavoriteMoviesUseCase
 import com.raflisalam.moviesapp.core.domain.usecase.favorite.FavoriteMoviesUseCaseImpl
 import dagger.Binds

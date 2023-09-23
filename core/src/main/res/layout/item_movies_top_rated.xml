@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="10dp"
-    android:layout_marginStart="15dp">
+    android:layout_marginStart="15dp"
+    tools:keep="@layout/item_movies_top_rated">
     
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -42,7 +44,7 @@
             app:layout_constraintTop_toBottomOf="@+id/image_poster" />
 
         <TextView
-            android:id="@+id/rating_values"
+            android:id="@+id/ratingValues"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="10sp"
@@ -51,7 +53,8 @@
             app:layout_constraintEnd_toEndOf="@id/rating_bar"
             app:layout_constraintStart_toStartOf="@id/rating_bar"
             app:layout_constraintTop_toTopOf="@id/rating_bar"
-            app:layout_constraintBottom_toBottomOf="@id/rating_bar"/>
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+            tools:ignore="SmallSp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

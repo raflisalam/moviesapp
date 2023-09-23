@@ -1,7 +1,7 @@
 package com.raflisalam.moviesapp.core.domain.model
 
-import com.raflisalam.fakeneflix.data.remote.model.movies.Genre
-import com.raflisalam.fakeneflix.data.remote.model.movies.ProductionCountry
+import com.raflisalam.moviesapp.core.data.remote.response.detail.Genre
+import com.raflisalam.moviesapp.core.data.remote.response.detail.ProductionCountry
 
 data class MovieDetails(
     val moviesId: Int,

@@ -18,7 +18,6 @@ import com.raflisalam.moviesapp.core.domain.usecase.search.SearchMoviesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import java.lang.Exception
 import javax.inject.Inject
 
 @HiltViewModel
@@ -110,7 +109,7 @@ class MoviesViewModel @Inject constructor(
                         _getRecommendationsMovies.value = it
                     }
                 }
-            } catch (e: java.lang.Exception) {
+            } catch (e: Exception) {
                 _getRecommendationsMovies.value = Resource.Error("Failed to fetch now playing movie list")
             }
         }

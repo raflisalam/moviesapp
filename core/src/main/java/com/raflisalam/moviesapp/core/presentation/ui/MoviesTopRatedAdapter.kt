@@ -20,7 +20,6 @@ class MoviesTopRatedAdapter(
         if (newListData == null) return
         listMovies.clear()
         listMovies.addAll(newListData)
-        notifyDataSetChanged()
     }
 
     class ViewHolder(private val binding: ItemMoviesTopRatedBinding): RecyclerView.ViewHolder(binding.root) {

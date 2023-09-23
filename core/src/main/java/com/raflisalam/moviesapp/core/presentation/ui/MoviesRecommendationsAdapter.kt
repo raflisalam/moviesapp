@@ -14,7 +14,7 @@ class MoviesRecommendationsAdapter(
     private var listMovies: List<Movies>
 ) : RecyclerView.Adapter<MoviesRecommendationsAdapter.ViewHolder>() {
 
-    class ViewHolder(val binding: ItemMoviesRecommendationsBinding): RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private val binding: ItemMoviesRecommendationsBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Movies) {
             binding.apply {
                 val posterUrl = "${Constants.path_image_base_url}${item.poster}"

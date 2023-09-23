@@ -23,7 +23,6 @@ class SearchMoviesAdapter(
         if (newListData == null) return
         listMovies.clear()
         listMovies.addAll(newListData)
-        notifyDataSetChanged()
     }
 
     inner class ViewHolder(private val binding: ItemSearchMovieResultBinding): RecyclerView.ViewHolder(binding.root) {

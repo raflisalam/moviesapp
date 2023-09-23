@@ -1,4 +1,4 @@
-package com.raflisalam.fakeneflix.data.remote.model.movies
+package com.raflisalam.moviesapp.core.data.remote.response.detail
 
 data class Genre(
     val id: Int,

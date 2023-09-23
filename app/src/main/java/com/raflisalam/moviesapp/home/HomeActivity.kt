@@ -48,7 +48,7 @@ class HomeActivity : AppCompatActivity(), OnItemDataClickListener {
 
     private fun setupMenu() {
         binding.apply {
-            val triggerPopup = menu
+            val triggerPopup = iconMenu
             val popupMenu = PopupMenu(this@HomeActivity, triggerPopup)
 
             popupMenu.menuInflater.inflate(R.menu.menu, popupMenu.menu)
@@ -111,6 +111,7 @@ class HomeActivity : AppCompatActivity(), OnItemDataClickListener {
         }
     }
 
+
     private fun showSearchResult(data: List<Movies>) {
         searchAdapter = SearchMoviesAdapter(this)
         searchAdapter.setData(data)
@@ -159,8 +160,8 @@ class HomeActivity : AppCompatActivity(), OnItemDataClickListener {
 
     private fun initRecyclerTopRated() {
         binding.apply {
-            rvTopRated.layoutManager = LinearLayoutManager(this@HomeActivity, LinearLayoutManager.HORIZONTAL, false)
-            rvTopRated.adapter = topRatedAdapter
+            recyclerView2.layoutManager = LinearLayoutManager(this@HomeActivity, LinearLayoutManager.HORIZONTAL, false)
+            recyclerView2.adapter = topRatedAdapter
         }
     }
 

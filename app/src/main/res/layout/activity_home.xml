@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/black"
     android:layout_height="match_parent"
-    tools:context=".home.HomeActivity">
+    tools:context=".home.HomeActivity"
+    tools:keep="@layout/activity_home">
 
     <TextView
         android:id="@+id/text_head_movies"
@@ -22,16 +22,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/icon_menu"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:src="@drawable/ic_menu"
         android:layout_marginEnd="15dp"
-        android:clickable="true"
+        android:contentDescription="menu"
         app:layout_constraintTop_toTopOf="@id/text_head_movies"
         app:layout_constraintBottom_toBottomOf="@id/text_head_movies"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:focusable="true" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
@@ -109,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@+id/text_head_top_rated" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTopRated"
+        android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"

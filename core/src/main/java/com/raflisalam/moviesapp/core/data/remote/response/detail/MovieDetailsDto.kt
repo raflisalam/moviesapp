@@ -1,9 +1,5 @@
 package com.raflisalam.moviesapp.core.data.remote.response.detail
 
-import com.raflisalam.fakeneflix.data.remote.model.movies.Genre
-import com.raflisalam.fakeneflix.data.remote.model.movies.ProductionCompany
-import com.raflisalam.fakeneflix.data.remote.model.movies.ProductionCountry
-import com.raflisalam.fakeneflix.data.remote.model.movies.SpokenLanguage
 import com.raflisalam.moviesapp.core.domain.model.MovieDetails
 
 data class MovieDetailsDto(
@@ -20,12 +16,10 @@ data class MovieDetailsDto(
     val overview: String,
     val popularity: Double,
     val poster_path: String,
-    val production_companies: List<ProductionCompany>,
     val production_countries: List<ProductionCountry>,
     val release_date: String,
     val revenue: Int,
     val runtime: Int,
-    val spoken_languages: List<SpokenLanguage>,
     val status: String,
     val tagline: String,
     val title: String,

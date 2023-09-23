@@ -1,6 +1,5 @@
 package com.raflisalam.moviesapp.core.domain.usecase.favorite
 
-import com.raflisalam.moviesapp.core.common.utils.mapFavoriteDomainToEntity
 import com.raflisalam.moviesapp.core.domain.model.FavoriteMovies
 import com.raflisalam.moviesapp.core.domain.repository.FavoriteMoviesRepository
 import kotlinx.coroutines.flow.Flow

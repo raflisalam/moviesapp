@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".detail.DetailMoviesActivity">
+    tools:context=".detail.DetailMoviesActivity"
+    tools:keep="@layout/activity_detail_movies">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -15,14 +15,16 @@
                     android:id="@+id/image_poster"
                     android:layout_width="match_parent"
                     android:layout_height="185dp"
+                    android:contentDescription="TODO"
                     android:scaleType="centerCrop"
                     app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
-                    android:id="@+id/btn_back"
+                    android:id="@+id/btnBack"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:visibility="invisible"
+                    android:contentDescription="TODO"
                     android:src="@drawable/btn_back"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="15dp"
@@ -89,7 +91,7 @@
                     app:layout_constraintBottom_toBottomOf="@id/icon_rating"/>
 
                 <TextView
-                    android:id="@+id/time_movies"
+                    android:id="@+id/timeMovies"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
@@ -127,7 +129,7 @@
                     app:layout_constraintStart_toStartOf="@id/icon_rating">
 
                         <com.google.android.material.chip.ChipGroup
-                            android:id="@+id/chip_genre_movies"
+                            android:id="@+id/chipGenreMovies"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:singleLine="true"
@@ -164,6 +166,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textSize="16sp"
+                    android:visibility="invisible"
                     android:layout_marginTop="10dp"
                     android:text="Actors"
                     android:textColor="@color/white"
@@ -211,7 +214,8 @@
                             android:text="Original Title :"
                             android:textColor="#686868"
                             app:layout_constraintTop_toBottomOf="@id/text_head_about_film"
-                            app:layout_constraintStart_toStartOf="@id/text_head_about_film"/>
+                            app:layout_constraintStart_toStartOf="@id/text_head_about_film"
+                            tools:ignore="SmallSp" />
 
                         <TextView
                             android:id="@+id/original_title"
@@ -224,7 +228,8 @@
                             android:visibility="visible"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@+id/genre"
-                            app:layout_constraintTop_toTopOf="@id/text_original_title" />
+                            app:layout_constraintTop_toTopOf="@id/text_original_title"
+                            tools:ignore="SmallSp" />
 
                         <TextView
                             android:id="@+id/text_genre"
@@ -237,7 +242,8 @@
                             android:visibility="visible"
                             android:layout_marginTop="5dp"
                             app:layout_constraintStart_toStartOf="@id/text_original_title"
-                            app:layout_constraintTop_toBottomOf="@+id/original_title" />
+                            app:layout_constraintTop_toBottomOf="@+id/original_title"
+                            tools:ignore="SmallSp" />
 
                         <TextView
                             android:id="@+id/genre"
@@ -250,7 +256,8 @@
                             android:visibility="visible"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@+id/production"
-                            app:layout_constraintTop_toTopOf="@id/text_genre" />
+                            app:layout_constraintTop_toTopOf="@id/text_genre"
+                            tools:ignore="SmallSp" />
 
                         <TextView
                             android:id="@+id/text_production"
@@ -263,7 +270,8 @@
                             android:layout_marginTop="5dp"
                             android:visibility="visible"
                             app:layout_constraintStart_toStartOf="@id/text_genre"
-                            app:layout_constraintTop_toBottomOf="@+id/genre" />
+                            app:layout_constraintTop_toBottomOf="@+id/genre"
+                            tools:ignore="SmallSp" />
 
                         <TextView
                             android:id="@+id/production"
@@ -276,7 +284,8 @@
                             android:visibility="visible"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@+id/release_date"
-                            app:layout_constraintTop_toTopOf="@id/text_production" />
+                            app:layout_constraintTop_toTopOf="@id/text_production"
+                            tools:ignore="SmallSp" />
 
                         <TextView
                             android:id="@+id/text_release_date"
@@ -289,7 +298,8 @@
                             android:textStyle="bold"
                             android:visibility="visible"
                             app:layout_constraintStart_toStartOf="@id/text_production"
-                            app:layout_constraintTop_toBottomOf="@+id/production" />
+                            app:layout_constraintTop_toBottomOf="@+id/production"
+                            tools:ignore="SmallSp" />
 
                         <TextView
                             android:id="@+id/release_date"
@@ -303,7 +313,8 @@
                             android:visibility="visible"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@id/text_release_date"
-                            app:layout_constraintTop_toTopOf="@id/text_release_date" />
+                            app:layout_constraintTop_toTopOf="@id/text_release_date"
+                            tools:ignore="SmallSp" />
 
                         <TextView
                             android:id="@+id/text_tagline"
@@ -316,7 +327,8 @@
                             android:textStyle="bold"
                             android:visibility="visible"
                             app:layout_constraintStart_toStartOf="@id/text_release_date"
-                            app:layout_constraintTop_toBottomOf="@+id/release_date" />
+                            app:layout_constraintTop_toBottomOf="@+id/release_date"
+                            tools:ignore="SmallSp" />
 
                         <TextView
                             android:id="@+id/tagline"
@@ -331,7 +343,8 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@+id/release_date"
-                            app:layout_constraintTop_toTopOf="@id/text_tagline" />
+                            app:layout_constraintTop_toTopOf="@id/text_tagline"
+                            tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -349,7 +362,7 @@
                     app:layout_constraintStart_toStartOf="@id/overview_movies"/>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvRecommendations"
+                    android:id="@+id/recyclerView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:visibility="invisible"
