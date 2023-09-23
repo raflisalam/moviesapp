@@ -4,7 +4,6 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-
 }
 
 apply from: '../shared_dependencies.gradle'
@@ -25,10 +24,13 @@ android {
         debug {
             buildConfigField "String", "MOVIE_API_KEY", "${movie_api_key}"
             buildConfigField "String", "AUTH_KEY", "${authorization_key}"
+
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -80,4 +82,8 @@ dependencies {
 
     //open-source library
     api 'it.xabaras.android:recyclerview-swipedecorator:1.4'
+
+    //encryption database
+    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
+    implementation "androidx.sqlite:sqlite-ktx:2.1.0"
 }

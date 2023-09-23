@@ -15,7 +15,7 @@
                     android:id="@+id/image_poster"
                     android:layout_width="match_parent"
                     android:layout_height="185dp"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/imageposter"
                     android:scaleType="centerCrop"
                     app:layout_constraintTop_toTopOf="parent"/>
 
@@ -24,7 +24,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:visibility="invisible"
-                    android:contentDescription="TODO"
+                    android:contentDescription="@string/btnback"
                     android:src="@drawable/btn_back"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="15dp"
