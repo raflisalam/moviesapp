@@ -17,12 +17,17 @@ object TimeUtils {
         }
         return try {
             val inputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-
             val date = inputFormat.parse(inputDate)
-            val formattedDate = SimpleDateFormat("dd MMMM, yyyy", Locale.getDefault()).format(date)
-            formattedDate
+
+            if (date != null) {
+                val formattedDate = SimpleDateFormat("dd MMMM, yyyy", Locale.getDefault()).format(date)
+                formattedDate
+            } else {
+                "Tanggal tidak valid"
+            }
         } catch (e: ParseException) {
             "Tanggal tidak valid"
         }
     }
+
 }

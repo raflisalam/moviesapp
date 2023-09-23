@@ -2,7 +2,7 @@ package com.raflisalam.moviesapp.core.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.raflisalam.moviesapp.core.common.constant.Constants
+import com.raflisalam.moviesapp.core.common.constant.Constants.AUTH_KEY
 import com.raflisalam.moviesapp.core.data.remote.network.MoviesApi
 import dagger.Module
 import dagger.Provides
@@ -35,7 +35,7 @@ object NetworkModule {
     fun provideAuthInterceptor(): Interceptor {
         return Interceptor { chain ->
             val originalRequest = chain.request()
-            val authToken = Constants.AUTH_KEY
+            val authToken = AUTH_KEY
             val authorizedRequest = originalRequest.newBuilder()
                 .header("Authorization", "Bearer $authToken")
                 .build()
