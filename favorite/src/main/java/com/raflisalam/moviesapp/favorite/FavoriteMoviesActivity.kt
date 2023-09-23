@@ -20,7 +20,6 @@ import com.raflisalam.moviesapp.favorite.databinding.ActivityFavoriteMoviesBindi
 import com.raflisalam.moviesapp.favorite.di.DaggerFavoriteComponent
 import com.raflisalam.moviesapp.favorite.viewmodel.FavoriteViewModel
 import com.raflisalam.moviesapp.favorite.viewmodel.ViewModelFactory
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 import kotlinx.coroutines.launch

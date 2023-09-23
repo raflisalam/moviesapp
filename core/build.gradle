@@ -67,7 +67,7 @@ dependencies {
 
     //open-source library
     implementation 'com.makeramen:roundedimageview:2.3.0'
-    implementation 'com.github.bumptech.glide:glide:4.13.1'
+    api 'com.github.bumptech.glide:glide:4.13.1'
 
     //view-model
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
@@ -79,5 +79,5 @@ dependencies {
     implementation 'jp.wasabeef:blurry:4.0.1'
 
     //open-source library
-    implementation 'it.xabaras.android:recyclerview-swipedecorator:1.4'
+    api 'it.xabaras.android:recyclerview-swipedecorator:1.4'
 }
