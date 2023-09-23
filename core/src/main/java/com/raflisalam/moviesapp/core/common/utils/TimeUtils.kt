@@ -12,7 +12,7 @@ object TimeUtils {
     }
 
     fun formatDate(inputDate: String): String {
-        if (inputDate.isNullOrEmpty()) {
+        if (inputDate.isEmpty()) {
             return ""
         }
         return try {
@@ -24,13 +24,5 @@ object TimeUtils {
         } catch (e: ParseException) {
             "Tanggal tidak valid"
         }
-    }
-
-    fun formatDateToYears(inputDate: String): String {
-        val inputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-        val outputFormat = SimpleDateFormat("yyyy", Locale.getDefault())
-
-        val year = inputFormat.parse(inputDate)
-        return outputFormat.format(year)
     }
 }

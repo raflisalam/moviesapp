@@ -12,14 +12,14 @@ fun mapResponsesToDomain(response: MoviesNetworkResponse?): List<Movies> {
 
     response?.results?.map { data ->
         val movie = Movies(
-            id = data.id ?: 0,
+            id = data.id,
             genreId = data.genre_ids,
-            title = data.title ?: "Unknown movie",
-            poster = data.poster_path ?: "",
-            background = data.backdrop_path ?: "Unknown Movie",
-            description = data.overview ?: "Unknown Description",
-            release_date = data.release_date ?: "Unknown Date",
-            rating = data.vote_average ?: 0.0
+            title = data.title,
+            poster = data.poster_path,
+            background = data.backdrop_path,
+            description = data.overview,
+            release_date = data.release_date,
+            rating = data.vote_average
         )
         movieList.add(movie)
     }
@@ -31,10 +31,10 @@ fun mapResponseCreditsCastToDomain(response: CreditsMovie?): List<CastMovies> {
 
     response?.cast?.forEach { data ->
         val castMovies = CastMovies(
-            id = data.id ?: 0,
-            name = data.name ?: "",
-            profilePics = data.profile_path ?: "",
-            nameCharacter = data.character ?: ""
+            id = data.id,
+            name = data.name,
+            profilePics = data.profile_path,
+            nameCharacter = data.character
         )
         castMoviesList.add(castMovies)
     }

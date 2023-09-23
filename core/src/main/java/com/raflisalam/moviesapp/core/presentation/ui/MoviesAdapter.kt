@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.raflisalam.moviesapp.core.common.constant.Constants
 import com.raflisalam.moviesapp.core.common.utils.OnItemDataClickListener
 import com.raflisalam.moviesapp.core.databinding.ItemMoviesPopularBinding
 import com.raflisalam.moviesapp.core.domain.model.Movies
@@ -25,7 +26,7 @@ class MoviesAdapter(
     inner class ViewHolder(private val binding: ItemMoviesPopularBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Movies) {
             binding.apply {
-                val posterUrl = "${com.raflisalam.moviesapp.core.common.constant.Constants.path_image_base_url}${item.poster}"
+                val posterUrl = "${Constants.path_image_base_url}${item.poster}"
                 Glide.with(itemView.context)
                     .load(posterUrl)
                     .apply(RequestOptions())

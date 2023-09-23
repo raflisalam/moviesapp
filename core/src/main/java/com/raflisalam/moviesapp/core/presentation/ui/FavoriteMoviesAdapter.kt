@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.raflisalam.moviesapp.core.common.constant.Constants
 import com.raflisalam.moviesapp.core.common.utils.OnItemDataClickListener
-import com.raflisalam.moviesapp.core.data.local.entity.MoviesEntity
 import com.raflisalam.moviesapp.core.databinding.ItemFavoriteMoviesBinding
 import com.raflisalam.moviesapp.core.domain.model.FavoriteMovies
 
@@ -21,7 +21,7 @@ class FavoriteMoviesAdapter(
     inner class ViewHolder(private val binding: ItemFavoriteMoviesBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(item: FavoriteMovies) {
             binding.apply {
-                val posterUrl = "${com.raflisalam.moviesapp.core.common.constant.Constants.path_image_base_url}${item.image_poster}"
+                val posterUrl = "${Constants.path_image_base_url}${item.image_poster}"
                 Glide.with(itemView.context)
                     .load(posterUrl)
                     .apply(RequestOptions())

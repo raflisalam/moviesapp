@@ -1,7 +1,5 @@
 package com.raflisalam.moviesapp.core.data.remote.response
 
-import dagger.multibindings.IntoMap
-
 data class SearchResponse(
     val results: List<Result>?
 )

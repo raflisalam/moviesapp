@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.raflisalam.moviesapp.core.R
+import com.raflisalam.moviesapp.core.common.constant.Constants
 import com.raflisalam.moviesapp.core.databinding.ItemMoviesRecommendationsBinding
 import com.raflisalam.moviesapp.core.domain.model.Movies
 
@@ -16,7 +17,7 @@ class MoviesRecommendationsAdapter(
     class ViewHolder(val binding: ItemMoviesRecommendationsBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Movies) {
             binding.apply {
-                val posterUrl = "${com.raflisalam.moviesapp.core.common.constant.Constants.path_image_base_url}${item.poster}"
+                val posterUrl = "${Constants.path_image_base_url}${item.poster}"
                 if (item.poster.isBlank()) {
                     val defaultDrawableResId = R.drawable.default_poster
                     imagePoster.setImageResource(defaultDrawableResId)
